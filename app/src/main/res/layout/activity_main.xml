@@ -47,7 +47,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:hint="Enter Gold Value per Gram"
+        android:hint="Enter Gold Value per Gram (RM)"
         android:inputType="text"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -4,6 +4,7 @@ package com.example.zakatpayment;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -50,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         totalGoldValueTextView = findViewById(R.id.tvTotGold);
         zakatPayableTextView = findViewById(R.id.tvZkatPayable);
         totalZakatTextView = findViewById(R.id.tvTotZakat);
+
+        showInstructionsDialog();
+
     }
 
     @Override
@@ -101,6 +105,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    public void showInstructionsDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("How to Use");
+        builder.setMessage("Enter the weight of your gold in grams. Select 'keep' if it's for investment or 'wear' if it's jewelry. Enter current gold value in (RM)");
+        builder.setPositiveButton("Got it", (dialog, which) -> {
+            dialog.dismiss();
+            // After the dialog is dismissed, show a hint for the value input field
+            Toast.makeText(this, "Enter the gold weight in gram and" +
+                    "\n current gold value in RM", Toast.LENGTH_SHORT).show();
+        });
+        AlertDialog dialog = builder.create();
+        dialog.setOnDismissListener(dialogInterface -> {
+
+        });
+        dialog.show();
+    }
 
     @Override
     public void onClick(View v) {
