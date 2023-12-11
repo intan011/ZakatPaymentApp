@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ZakatPayment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimaryDark">@color/my_light_primarydark</item>
+         <item name="colorPrimary">@color/my_light_primary</item>
+         <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Theme.ZakatPayment" parent="Base.Theme.ZakatPayment" />
+</resources>
